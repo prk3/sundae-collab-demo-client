@@ -1,0 +1,8 @@
+/node_modules/
+
+/cypress/**/*.js
+!/cypress/integration/my/*.spec.js
+
+/src/serviceWorker.ts
+/src/react-app-env.d.ts
+/src/jot/

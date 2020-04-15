@@ -1,0 +1,18 @@
+# git files
+.git
+.gitignore
+.gitattributes
+
+# local configuration
+.env
+
+# npm stuff
+node_modules
+npm-debug.log
+
+# cypress tests
+/cypress
+
+# build folder
+/build
+

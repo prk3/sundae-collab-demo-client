@@ -1,0 +1,4 @@
+{
+  "baseUrl": "http://localhost:8200",
+  "firefoxGcInterval": 1
+}

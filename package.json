@@ -1,6 +1,6 @@
 {
-  "name": "client",
-  "description": "",
+  "name": "sundae-collab-demo-client",
+  "description": "Mini CMS using React.",
   "version": "0.1.0",
   "author": {
     "name": "prk3",

@@ -58,18 +58,19 @@ Another interesting element in the RecipeFormEdit is the list of participants wo
 
 ## Environment
 
-If you run demo-client locally, copy `example.env` to `.env`. You can change the port the server is running at with `PORT` variable.
+If you run demo-client locally, copy `example.env` to `.env`. Adjust variables there to change how the app is built and run.
 
 demo-client is exchanging data with two services: sundae-collab-server and sundae-collab-demo-api. You must start them separately and then provide demo-client with urls by setting two environment variables:
 
 - REACT_APP_API_URL - url of a sundae-collab-demo-api instance
 - REACT_APP_COLLAB_URL - url of a sundae-server instance (with ws or wss protocol)
 
-
 The full command that runs demo-client locally looks like this:
 ```bash
 env REACT_APP_API_URL=localhost:8000 REACT_APP_COLLAB_URL=localhost:8100 npm run start
 ```
+
+Warning: `PUBLIC_URL` and `REACT_APP` variables must be provided at build time. Because Dockerfile builds demo-client at image construction stage, those variables must be passed through `--build-arg`/`args`, not `--env`/`--environment`. Check out `Dockerfile` to see which variables belong to which group.
 
 ## Useful commands
 

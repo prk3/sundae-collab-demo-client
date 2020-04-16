@@ -61,7 +61,6 @@ function callApi(
     && method !== 'GET'
     && method !== 'HEAD';
 
-  console.log(process.env.REACT_APP_API_URL + path);
   return fetch(process.env.REACT_APP_API_URL + path, {
     method,
     signal: abortController?.signal,

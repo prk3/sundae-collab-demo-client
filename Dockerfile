@@ -11,8 +11,11 @@ COPY package.json .
 COPY package-lock.json .
 RUN npm install
 
-EXPOSE $PORT
-CMD npm run build && npx serve -s -p $PORT build
-
 COPY . .
+RUN npm run build
+
+EXPOSE $PORT
+CMD npx serve -s -p $PORT build
+
+
 

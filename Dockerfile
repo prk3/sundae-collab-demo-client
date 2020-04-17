@@ -9,10 +9,10 @@ ARG REACT_APP_COLLAB_URL=ws://localhost:8100
 
 COPY package.json .
 COPY package-lock.json .
-RUN npm install
+RUN NODE_ENV=production npm install
 
 COPY . .
-RUN npm run build
+RUN NODE_ENV=production npm run build
 
 EXPOSE $PORT
-CMD npx serve -s -p $PORT build
+CMD NODE_ENV=production npx serve -s -p $PORT build

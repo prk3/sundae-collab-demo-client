@@ -1,5 +1,7 @@
 /node_modules/
 
+/build
+
 /cypress/**/*.js
 !/cypress/integration/my/*.spec.js
 

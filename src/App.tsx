@@ -15,6 +15,7 @@ const RecipesEditPage = lazy(() => import('./pages/RecipesEdit'));
 
 const TestTypingLag = lazy(() => import('./pages/TestTypingLag'));
 const TestMultipleClients = lazy(() => import('./pages/TestMultipleClients'));
+const TestStringsEqual = lazy(() => import('./pages/TestStringsEqual'));
 
 // demo-client generates a random identity per session
 const name = sessionStorage.getItem('name') || generateName();
@@ -26,6 +27,8 @@ const App = () => (
       <Suspense fallback={<Loading />}>
         <Switch>
           <Route exact path="/test/multiple-clients/:number" component={TestMultipleClients} />
+          <Route exact path="/test/typing-lag" component={TestTypingLag} />
+          <Route exact path="/test/strings-equal" component={TestStringsEqual} />
           <Route path="/">
             {() => (
               // identity should come from your auth provider
@@ -37,8 +40,6 @@ const App = () => (
                   <Route exact path="/recipes" component={RecipesPage} />
                   <Route exact path="/recipes/add" component={RecipesAddPage} />
                   <Route exact path="/recipes/:id" component={RecipesEditPage} />
-
-                  <Route exact path="/test/typing-lag" component={TestTypingLag} />
                 </Switch>
               </CollaborationProvider>
             )}

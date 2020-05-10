@@ -76,19 +76,27 @@ Warning: `PUBLIC_URL` and `REACT_APP` variables must be provided at build time. 
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits. You will also see any lint errors in the console.
 
-### `npm test`
+### `npm run build`
 
-Launches the test runner in the interactive watch mode.
+Builds the app for production to the `build` folder.
+
+### `npm run start`
+
+Start serving compiled application. Use `-p` flag to change the port.
 
 ### `npm run lint`
 
 Lints all source files and cypress integration tests.
+
+### `npm run test`
+
+Launches the test runner in the interactive watch mode.
 
 ### `npm run cypress`
 
@@ -97,14 +105,6 @@ Run automated interface tests in the console.
 ### `npx cypress --open`
 
 Open cypress dashboard to select and run tests in a browser.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
-
-### `npx serve -s build`
-
-Start serving compiled application. Use `-p` flag to change the port.
 
 ## Learn More
 
